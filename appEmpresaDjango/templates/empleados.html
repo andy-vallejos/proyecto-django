@@ -5,10 +5,11 @@
 {%endblock %}
 
 {% block contenido %}
-  <h2>Lista de empleados</h2>
+  <section class='contenido'>
+    <h2>Lista de empleados</h2>
   <h3>{{ departamento.nombre }}</h3>
   {% if empleados %}
-    <ul>
+    <ul class='card'>
     {% for e in empleados %}
       <li>
         <a href="{% url 'empleado' e.id %}">{{ e.nombre}}</a>
@@ -18,5 +19,6 @@
   {% else %}
     <p>No hay empleados creados.</p>
   {% endif %}
+  </section>
   
 {% endblock %}

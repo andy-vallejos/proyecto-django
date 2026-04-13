@@ -5,7 +5,8 @@
 {%endblock%}
 
 {% block contenido %}
-  <h2>Listado de departamentos</h2>
+ <section class='contenido'>
+   <h2>Listado de departamentos</h2>
   {% if lista_departamentos %}
     <ul>
       {% for d in lista_departamentos %}
@@ -17,5 +18,6 @@
   {% else %}
     <p>No hay departamentos creados.</p>
   {% endif %}
+ </section>
   
 {% endblock %}

@@ -5,10 +5,11 @@
 {% endblock %} 
 
 {% block contenido %}
-  <h2>Datos del empleado</h2>
+  <section class='contenido'>
+    <h2>Datos del empleado</h2>
 
   {% if empleado %}
-    <ul>
+    <ul class="card">
       <li>{{ empleado.nombre}}</li>
       <li>{{ empleado.fecha_nacimiento}}</li>
       <li>{{ empleado.antiguedad}}</li>
@@ -31,5 +32,6 @@
     {% endif %} 
   {% else %}
     <p>No existe este empleado.</p>
-  {% endif %}
+  {% endif %}  
+  <section>
 {% endblock %}
